@@ -1,0 +1,12 @@
+<div class="locationList">
+  <ul class="myPlaces">
+      <li class="myPlaces__item" *ngFor=" let place of places ">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <div class="locationDetails">
+              <span class="locationDetails__name">{{place.name}}</span>
+              <span class="locationDetails__info">{{place.state}}, {{place.country}}</span>
+          </div>
+          <button (click)='onRemovePlace(place.id)'>&times;</button>
+      </li>
+  </ul>
+</div>

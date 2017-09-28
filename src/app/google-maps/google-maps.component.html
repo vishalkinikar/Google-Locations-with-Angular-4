@@ -1,0 +1,8 @@
+<agm-map [latitude]='19.4451929' [longitude]='72.8237537'  [zoom]="13" (mapReady)="assignMap($event)">
+  <agm-marker *ngFor='let location of locations'
+    [latitude]='location.latitude'
+    [longitude]='location.longitude'
+    (markerClick)='markerClicked(location)'
+    [markerDraggable]="true"
+    (dragEnd)="markerDragEnd(location, $event)"></agm-marker>
+</agm-map>
